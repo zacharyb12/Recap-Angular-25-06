@@ -1,0 +1,14 @@
+<h2>Categories</h2>
+
+<a routerLink="/category-create">Create Category</a>
+
+<article>
+
+    @for (c of categories; track $index) {
+        <div>
+            <h3>{{c.name}} - {{c.id}}</h3>
+            <button>Details</button>
+        </div>
+    }
+</article>
+    
