@@ -121,6 +121,12 @@ export class Authservice {
     const email = this.getEmailToken(token);
     const role = this.getRoleToken(token);
 
+    console.log(id);
+    console.log(name);
+    console.log(email);
+    console.log(role);
+    
+
     // localstorage
     localStorage.setItem("token",token)
 

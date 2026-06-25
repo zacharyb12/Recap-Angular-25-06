@@ -1,0 +1,29 @@
+@if(!isLogged()){
+
+    @if(isOpen()){
+        <button (click)="toggleForm()">x</button>
+        <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+
+            <div>
+                <label>Email</label>
+                <input type="texte" formControlName="email">
+            </div>
+
+            <div>
+                <label>Password</label>
+                <input type="texte" formControlName="password">
+            </div>
+
+            <button type="submit">Login</button>
+
+        </form>
+    }
+    @else {
+        <button (click)="toggleForm()">Login</button>
+    }
+
+}
+
+@else{
+    <button (click)="logout()">Logout</button>
+}

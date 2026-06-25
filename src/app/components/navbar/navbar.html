@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<nav>
+    <ul>
+        <li><a routerLink="/">Home</a></li>
+
+        <li><app-login></app-login></li>
+
+        @if(isLogged()){
+            <li></li>
+        }
+
+        @if(isAdmin()){
+            <li></li>
+        }
+    </ul>
+</nav>
